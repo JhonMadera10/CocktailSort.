@@ -1,0 +1,34 @@
+ import javax.swing.JOptionPane;
+import java.util.HashMap;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        // Arreglo de números
+        int[] vector = {45, 50, 30, 65, 80, 20, 90, 15, 70, 55};
+
+        // Crear la tabla Hash
+        HashMap<Integer, Integer> hash = new HashMap<>();
+
+        // Guardar cada número con su posición
+        for (int i = 0; i < vector.length; i++) {
+            hash.put(vector[i], i);
+        }
+
+        // Pedir el número a buscar
+        int dato = Integer.parseInt(
+                JOptionPane.showInputDialog("Ingrese el número a buscar:"));
+
+        // Buscar en la tabla Hash
+        if (hash.containsKey(dato)) {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "El número fue encontrado en la posición: " + hash.get(dato));
+        } else {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "El número no fue encontrado.");
+        }
+    }
+}
