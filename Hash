@@ -5,9 +5,6 @@ public class App {
 
     public static void main(String[] args) {
 
-        // Arreglo de números
-        int[] vector = {45, 50, 30, 65, 80, 20, 90, 15, 70, 55};
-
         // Crear la tabla Hash
         HashMap<Integer, Integer> hash = new HashMap<>();
 
